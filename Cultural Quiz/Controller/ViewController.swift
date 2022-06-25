@@ -22,15 +22,16 @@ class ViewController: UIViewController {
         updateUI()
     }
 
+
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         let userAnswer = sender.currentTitle!
                 
         let userGotItRight = quizQuestion.checkAnswer(userAnswer: userAnswer)
         
         if userGotItRight {
-            sender.backgroundColor = UIColor.green
+            sender.backgroundColor = UIColor.systemGreen
         } else {
-            sender.backgroundColor = UIColor.red
+            sender.backgroundColor = UIColor.systemRed
         }
         
         quizQuestion.nextQuestion()
@@ -46,6 +47,8 @@ class ViewController: UIViewController {
         trueButton.backgroundColor = UIColor.clear
         falseButton.backgroundColor = UIColor.clear
     }
+    
+
     
     
 }
